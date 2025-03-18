@@ -22,3 +22,9 @@ django-admin startapp posts
 # post라는 데이터를 다룰 것
 ```
 등록은 settings.py 에 들어가서 'posts' 포함시키기
+
+## 3. url에 앱 등록
+
+## 4. from post import views 불러오기
+
+## 5. 앱 폴더 안에 templates 폴더 생성
