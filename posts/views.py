@@ -25,11 +25,18 @@ def create(request):
     title = request.GET.get('title')
     content = request.GET.get('content')
     
-    # 여기서부터 
     post = Post()
     post.title = title
     post.content = content
-    post.save() # 여기까지가 뭔소린지 모르겠음
+    # 파이썬 세상의 객체로만 존재
+    # save를 해줘야 DB에 저장이 되며 고유번호가 생성됨
+    post.save()
 
     # return redirect('/index/') # 작성 및 저장 후 보여줄 경로
     return redirect(f'/posts/{post.id}/')
+
+def delete(request, id):
+    # 삭제할 게시물 찾기
+    post = Post.objects.get(id=id)
+    post.delete()
+    return redirect('/index/')
