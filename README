@@ -28,3 +28,11 @@ django-admin startapp posts
 ## 4. from post import views 불러오기
 
 ## 5. 앱 폴더 안에 templates 폴더 생성
+
+# 2. CRUD
+- modeling(`models.py`) 은 models.py에서 작업함
+```python
+class Post(models.model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+```
