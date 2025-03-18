@@ -12,5 +12,13 @@
 - 프로젝트 생성
 ```shell
 django-admin startproject crud . 
-# 현재 폴더에 crud라는 폴더를 생성해 주세요.
+# 현재 폴더에 crud라는 프로젝트트를 생성해 주세요.
 ```
+
+## 2. 앱 생성 / 등록
+
+```shell
+django-admin startapp posts
+# post라는 데이터를 다룰 것
+```
+등록은 settings.py 에 들어가서 'posts' 포함시키기
