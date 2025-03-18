@@ -30,9 +30,21 @@ django-admin startapp posts
 ## 5. 앱 폴더 안에 templates 폴더 생성
 
 # 2. CRUD
+
 - modeling(`models.py`) 은 models.py에서 작업함
 ```python
 class Post(models.model):
     title = models.CharField(max_length=100)
     content = models.TextField()
+```
+
+- migration (python 데이터를 번역하여 SQL로 데이터를 이동시키는 작업)
+<!-- 번역본 생성 -->
+```shell
+python manage.py makemigrations
+```
+
+<!-- DB에 반영 -->
+```shell
+python manage.py migrate
 ```
