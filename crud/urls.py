@@ -20,5 +20,13 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Read()ALL
     path('index/', views.index),
+    # posts라는 경로에 id가 들어올 것입니다.(id: 게시물의 고유넘버)
+    path('posts/<int:id>/', views.detail), # 상세페이지 만들 것이기 때문에 = detail로 설정
+    # posts/1/
+    # posts/10/
+    # posts/123/ 모두 path('posts/<int:id>') 가 처리해줌
+    path('posts/new/', views.new), # 데이터 받아오기(입력)
+    path('posts/create/', views.create), # 데이터 저장하는 공간
 ]

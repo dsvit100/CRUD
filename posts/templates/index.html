@@ -7,10 +7,14 @@
 </head>
 <body>
     <h1>index</h1>
+    <a href="/posts/new/">new</a>
     {% for post in posts %}
         <p>{{post.title}}</p> 
         <!-- post 안의 title에 접근 -->
          <p>{{post.content}}</p>
+         <!-- post.id = id가 인덱스번호이기 때문에 -->
+         <a href="/posts/{{post.id}}/">detail</a>
+         <!-- 얜 왜 f스트링 안써 -->
          <hr>
     {% endfor %}
 
