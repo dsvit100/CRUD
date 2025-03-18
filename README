@@ -48,3 +48,19 @@ python manage.py makemigrations
 ```shell
 python manage.py migrate
 ```
+여기까지 작업했으면 이대로 데이터 구조 잡으라는 명령은 끝남
+
+- SQLite Viewer 설치
+
+- create super user 등록
+```shell
+python manage.py createsuperuser
+```
+
+- admin 페이지에 모델 등록(`admin.py`)
+- (관리자 페이지에 post 추가하기(register))
+```python
+from django.contrib import admin
+from .models import Post
+admin.site.register(Post)
+```
