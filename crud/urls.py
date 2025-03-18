@@ -21,7 +21,7 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Read()ALL
-    path('index/', views.index),
+    path('posts/', views.index),
 
     # Read(1)
     # posts라는 경로에 id가 들어올 것입니다.(id: 게시물의 고유넘버)
@@ -39,4 +39,8 @@ urlpatterns = [
     # 같은 url에 다른 기능은 구현 X
     # 따라서 /delete/를 추가해주기
     path('posts/<int:id>/delete/', views.delete),
+
+    # Update
+    path('posts/<int:id>/edit/', views.edit), # 기존정보를 보여주는 단계
+    path('posts/<int:id>/update', views.update) # 수정한 데이터를 db에 반영하는 단계
 ]
