@@ -64,3 +64,6 @@ from django.contrib import admin
 from .models import Post
 admin.site.register(Post)
 ```
+
+- 게시물 전체 불러오기
+- 반복문을 통해 게시물을 하나씩 꺼내오기
