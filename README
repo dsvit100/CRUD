@@ -4,12 +4,14 @@
 
 - 가상환경 생성
 - 가상환경 활성화
-- `.gitignore` 설정 (python, window, macOS, Django)
 
 ## 1. Django
 
 - pip install Django
 - 프로젝트 생성
+
+- `.gitignore` 설정 (python, window, macOS, Django)
+
 ```shell
 django-admin startproject crud . 
 # 현재 폴더에 crud라는 프로젝트트를 생성해 주세요.
